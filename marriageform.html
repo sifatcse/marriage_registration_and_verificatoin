@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marriage Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 1475px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+header {
+  background-color: #123C69;
+  padding: 15px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+footer {
+          background-color: #123C69;
+          padding: 50px;
+          text-align: center;
+          color: white;
+       }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Marriage Registration and Marital Status Verification</h2>
+</header>
+<marquee>Please submit information carefully. Only registred person is allowed to submit information</marquee>
+
+<br>
+<br>
+<br> 
+
+<h2 style="text-align:center";>Marriage Registration Form</h2>
+<p style="text-align:center";>Authorized officer from Registry Office is permitted to submit information</p>
+
+<div class="row">
+  <div class="column" style="background-color: pink;">
+    <h2>Information of Groom</h2>
+    
+  <form action="connect.php" method="post">
+  
+  <label for="plmarr">Place of Marriage(Full Details):</label><br>
+  <input type="text" id="plamarr" name="plmarr"><br>
+  
+  <label for="gname">Groom's Name:</label><br>
+  <input type="text" id="gname" name="gname"><br>
+  
+  <p>Groom's date of Birth:</p>
+  <label for="gbirth"></label>
+  <input type="date" id="gbirth" name="gbirth">
+  
+  
+  <p>Groom Age:</p>
+  <label for="gage"></label>
+  <input type="number" id="gage" name="groomage" min="17" max="100"><br>
+  
+  <label for="gfname">Groom Father's Name:</label><br>
+  <input type="text" id="gfname" name="gfname"><br>
+  
+  <label for="gmname">Groom Mother's Name:</label><br>
+  <input type="text" id="gmname" name="gmname"><br>
+  
+  <label for="gadd">Address:</label><br>
+  <input type="text" id="gadd" name="gadd"><br>
+  
+  <label for="gukil">Groom's Ukil Name:</label><br>
+  <input type="text" id="gukil" name="gukil"><br>
+  
+   <label for="wit1">Witness One Name:</label><br>
+  <input type="text" id="wit1" name="wit1"><br>
+  
+  
+  <label for="wit1fname">Witness One Father's<br> Name:</label><br>
+  <input type="text" id="wit1fname" name="wit1fname"><br>
+  
+  <label for="wit1mname">Witness One Mother's<br> Name:</label><br>
+  <input type="text" id="wit1mname" name="wit1mname"><br>
+  
+  
+  <label for="wit1add">Witness One Address:</label><br>
+  <input type="text" id="wit1add" name="wit1add"><br>
+  
+  
+  
+  <label for="mohor">Amount of Mohor:</label><br>
+  <input type="text" id="mohor" name="mohor"><br>
+  
+  <label for="mohorpaid">Amount of Mohor Paid<br> During Marriage:</label><br>
+  <input type="text" id="mohorpaid" name="mohorpaid"><br>
+  
+  <label for="nwife">Number of Married Wife:</label><br>
+  <input type="text" id="nwife" name="nwife"><br>
+  
+  <label for="wifep">Permission of First Wife<br> (If any):</label><br>
+  <input type="text" id="wifep" name="wifep"><br>
+
+  <label for="regno">Registration No:</label><br>
+  <input type="text" id="regno" name="regno" required><br>
+
+  <label for="regid">Register ID:</label><br>
+  <input type="text" id="regid" name="regid"><br>
+
+
+  
+  
+  
+  
+  </div>
+  <div class="column" style="background-color: powderblue;">
+    <h2>Information of Bride</h2>
+    
+  <label for="bname">Bride's Name:</label><br>
+  <input type="text" id="bname" name="bname">
+  
+  <p>Bride's date of Birth:</p>
+   <label for="bbirth"></label>
+  <input type="date" id="bbirth" name="bbirth"><br>
+  
+  <p>Bride Age:</p>
+  <label for="bage"></label>
+  <input type="number" id="bage" name="brideage" min="15" max="100"><br>
+  
+  <label for="bfname">Bride Father's Name:</label><br>
+  <input type="text" id="bfname" name="bfname"><br>
+  
+  <label for="bmname">Bride Mother's Name:</label><br>
+  <input type="text" id="bmname" name="bmname"><br>
+  
+  <label for="badd">Address:</label><br>
+  <input type="text" id="badd" name="badd"><br>
+  
+  
+  <p>Bride's Pre Marital Status:</p>
+  <input type="radio" id="unmarried" name="premstatus" value="Unmarried">
+  <label for="unmarried">Unmarried</label><br>
+  <input type="radio" id="divorced" name="premstatus" value="Divorced">
+  <label for="divorced">Divorced</label><br>
+  <input type="radio" id="widow" name="premstatus" value="Widow">
+  <label for="widow">Widow</label>
+
+<br><br>
+
+  
+  
+   <label for="bukil">Bride's Ukil Name:</label><br>
+  <input type="text" id="bukil" name="bukil"><br>
+  
+  <label for="wit2name">Witness Two Name:</label><br>
+  <input type="text" id="wit2name" name="wit2name"><br>
+  
+  <label for="wit2fname">Witness Two Father's<br> Name:</label><br>
+  <input type="text" id="wit2fname" name="wit2fname"><br>
+  
+  <label for="wit2mname">Witness Two Mother's<br> Name:</label><br>
+  <input type="text" id="wit2mname" name="wit2mname"><br>
+  
+  
+  <label for="wit2add">Witness Two Address:</label><br>
+  <input type="text" id="wit2add" name="wit2add"><br>
+  
+  <label for="drtob">Divorce Right Given To <br> Bride(Yes / No):</label><br>
+  <input type="text" id="drtob" name="drtob"><br>
+  
+  
+  <p>Date of marriage registry:</p>
+  <label for="mregdate">Date:</label>
+  <input type="date" id="mregdate" name="mregdate">
+  
+  <br>
+  <br>
+  <br>
+  
+  <input type="submit" value="Submit">
+  
+  </form>
+  
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+<footer>
+<p>Non government project. Users must see our privacy policy and accept before using our service. All rights reserved to us.</p>
+</footer>
+
+</body>
+</html>
